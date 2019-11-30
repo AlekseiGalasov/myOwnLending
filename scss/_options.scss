@@ -18,8 +18,8 @@ $black : #262626;
     align-items: center;
 }
 
-@mixin asd () {
-    display: flex;
+@mixin justify-content () {
     justify-content: space-evenly;
-    align-items: center;
+    -webkit-justify-content: space-around;
+    -moz-justify-content:space-evenly;
 }
