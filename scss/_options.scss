@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*** Colors ***/
+
+$white : #F2F2F2;
+$darkWhite : #BFBFBF; 
+$red : #EC5E5E;
+$black : #262626;
+
+@mixin flex () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin asd () {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

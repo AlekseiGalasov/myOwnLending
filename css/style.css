@@ -1,0 +1,114 @@
+/******************************* MIXINS VARIABLES **********************************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/*** Colors ***/
+/******************************* HEADER **********************************/
+.header {
+  display: grid;
+  position: fixed;
+  width: 100%;
+  grid-template-columns: 1fr 2.5fr;
+  grid-template-rows: 5px 125px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.header .logo-lang-wrapper {
+  grid-area: 1/1/3/2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background: #262626;
+  border-right: 1px solid #F2F2F2;
+}
+.header .logo-lang-wrapper .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .logo-lang-wrapper .logo .logo__link {
+  font-size: 36px;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #F2F2F2;
+}
+.header .logo-lang-wrapper .lang .lang-inner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  font-size: 20px;
+  margin-top: 12px;
+}
+.header .logo-lang-wrapper .lang .lang-inner .lang-inner__link {
+  color: #F2F2F2;
+  text-decoration: none;
+}
+.header .progress-bar {
+  position: relative;
+}
+.header .progress-bar .progress-bar__progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  width: 0%;
+  background: #EC5E5E;
+}
+.header .nav-wrapper {
+  background: #262626;
+}
+.header .nav-wrapper .nav {
+  position: relative;
+  height: 100%;
+}
+.header .nav-wrapper .nav .nav__inner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  font-size: 20px;
+  height: inherit;
+}
+.header .nav-wrapper .nav .nav__inner .nav__link {
+  color: #F2F2F2;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.header .nav-wrapper .nav .nav__inner .nav__link:hover {
+  color: #EC5E5E;
+}
+
+.test {
+  height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header .logo-lang-wrapper {
+    grid-area: 2/1/3/2;
+    display: block;
+  }
+  .header .logo-lang-wrapper .logo {
+    display: none;
+  }
+  .header .logo-lang-wrapper .lang {
+    height: 100%;
+    width: 100%;
+  }
+  .header .logo-lang-wrapper .lang .lang-inner {
+    height: 100%;
+    margin-top: 0;
+  }
+  .header .nav-wrapper {
+    grid-area: 2/2/3/2;
+  }
+  .header .progress-bar {
+    grid-area: 1/1/3/3;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
