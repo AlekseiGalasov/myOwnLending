@@ -8,15 +8,15 @@
 /*** Colors ***/
 /******************************* HEADER **********************************/
 .header {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
   display: grid;
   position: fixed;
-  width: 100%;
   grid-template-columns: 1fr 2.5fr;
   grid-template-rows: 5px 125px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 .logo-lang-wrapper {
@@ -41,6 +41,7 @@
   font-size: 36px;
   text-decoration: none;
   color: #F2F2F2;
+  font-weight: 700;
 }
 
 .lang-inner {
@@ -300,6 +301,19 @@
     margin-left: -960px;
     left: 50%;
   }
+}
+/******************************* SECTION ABOUT ME **********************************/
+.about_me {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section--padding {
+  padding-top: 130px;
 }
 
 /*# sourceMappingURL=style.css.map */

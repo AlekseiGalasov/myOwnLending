@@ -23,3 +23,9 @@ $black : #262626;
     -webkit-justify-content: space-around;
     -moz-justify-content:space-evenly;
 }
+
+@mixin grid {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}

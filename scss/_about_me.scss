@@ -1,0 +1,10 @@
+.about_me {
+    @include grid;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section--padding {
+    padding-top: 130px;
+}
