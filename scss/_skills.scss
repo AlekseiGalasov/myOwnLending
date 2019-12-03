@@ -1,0 +1,52 @@
+.skills {
+    @include grid;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    row-gap: 50px;
+    background: $black;
+}
+
+.caption {
+
+    justify-self: center;
+    align-self: center;
+}
+
+.caption--area {
+    grid-area: 1/1/1/4;
+}
+
+.caption__text {
+    font-size: 40px;
+    margin-top: 40px;
+    color: $white;
+}
+
+.pers-skills,.prof-skills,.cv-block {
+    color:$white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+.pers-skills__text, .prof-skills__text {
+    margin: 20px 0 40px 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.skills-list__skill {
+    line-height: 45px;
+    font-size: 24px;
+}
+
+.skills-list__skill:nth-child(even) {
+    color: $darkWhite;
+}
+
+.cv-block__img {
+    cursor: pointer;
+}

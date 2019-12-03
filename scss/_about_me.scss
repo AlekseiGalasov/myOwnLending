@@ -1,10 +1,29 @@
 .about_me {
     @include grid;
-    height: 700px;
-    display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .section--padding {
-    padding-top: 130px;
+    padding-top: 60px;
+}
+
+.left-side {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.right-side__img {
+    margin-bottom: -4px;
+}
+
+.left-side__name {
+    margin: 0 0 20px 140px;
+    font-size: 36px;
+}
+
+.left-side__text {
+    margin: 0 0 20px 140px;
+    font-size: 24px;
 }

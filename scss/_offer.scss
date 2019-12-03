@@ -1,0 +1,19 @@
+.offer {
+    @include grid;
+    row-gap: 40px;
+    background: $black;
+}
+
+.text-wrapper {
+    justify-self: center;
+    line-height: 40px;
+    font-size: 24px;
+    text-align: center;
+    list-style-type: none;
+    color: $white;
+    padding-bottom: 80px;
+}
+
+.text-wrapper__text:nth-child(even) {
+    color: $darkWhite;
+}

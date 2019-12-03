@@ -6,6 +6,8 @@
     grid-template-rows: 5px 125px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    border-bottom: 1px solid white;
+    z-index: 2;
 }
 
 
@@ -37,7 +39,7 @@
     @include justify-content;
     align-items: center;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 12px;
 }
 
@@ -52,6 +54,7 @@
 
 .progress-bar {
     position: relative;
+    background: $white;
 }
 
 .progress-bar__progress {
@@ -78,7 +81,7 @@
     @include justify-content;
     align-items: center;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 24px;
     height: inherit;
 }
 
