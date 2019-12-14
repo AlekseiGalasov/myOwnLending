@@ -68,7 +68,6 @@ const prev = document.querySelector('.prev__img'),
 next = document.querySelector('.next__img'),
 wrapperWidth = slides.length;
 
-
 slides.x = 0;
 slides.step = slide.offsetWidth;
 slides.forEach(slide => {
@@ -85,7 +84,7 @@ prev.addEventListener('click', () => {
         slides.x = slide.offsetLeft + x;
         slide.style.left = slides.x + 'px';
         
-        if(slide.offsetLeft == '3258') {
+        if(slide.offsetLeft == (slide.offsetWidth * slides.length)) {
             slide.style.left = (0) + 'px';
         }
     });
@@ -100,7 +99,7 @@ next.addEventListener('click', () => {
         console.log(slide.offsetLeft);
         slide.style.left = slides.x + 'px';
 
-        if(slide.offsetLeft == '-3258') {
+        if(slide.offsetLeft == -(slide.offsetWidth * slides.length)) {
             slide.style.left = 0 + 'px';
         }
 
@@ -108,55 +107,51 @@ next.addEventListener('click', () => {
 })
 
 
-/********* NAV HIGHLIGHT */
+/********* NAV HIGHLIGHT *****************/
 
-const about = document.querySelector('.about_me');
-const skills = document.querySelector('.skills');
-const works = document.querySelector('.works');
-const offer = document.querySelector('.offer');
-const form = document.querySelector('.form');
-const nav = document.querySelectorAll('.nav__link')
+const nav = document.querySelectorAll('.nav__item')
+const section = document.querySelectorAll('section');
 let navArr = [];
 nav.forEach(li => {
     navArr.push(li);
 })
+let secArr = [];
+section.forEach(sec => {
+    secArr.push(sec);
+})
+
 window.addEventListener('scroll', highLight);
 function highLight() {
-
-
-    console.log(about.offsetTop);
-    console.log(Math.floor(about.getBoundingClientRect().height));
-
-   if ((document.documentElement.scrollTop + 125) > about.offsetTop && (document.documentElement.scrollTop + 125) <  (Math.floor(about.getBoundingClientRect().height))) {   
-    navArr[0].style.color = '#EC5E5E';
-    navArr[1].style.color = '#F2F2F2';
-    navArr[2].style.color = '#F2F2F2';
-    navArr[3].style.color = '#F2F2F2';
-    navArr[4].style.color = '#F2F2F2';
-
-    } else if ((document.documentElement.scrollTop + 125) > skills.offsetTop && (document.documentElement.scrollTop + 125) <  (Math.floor(skills.getBoundingClientRect().height + skills.offsetTop))) {
-        navArr[1].style.color = '#EC5E5E';
-        navArr[0].style.color = '#F2F2F2';
-        navArr[2].style.color = '#F2F2F2';
-        navArr[3].style.color = '#F2F2F2';
-        navArr[4].style.color = '#F2F2F2';
-    } else if ((document.documentElement.scrollTop + 125) > works.offsetTop && (document.documentElement.scrollTop + 125) <  (Math.floor(works.getBoundingClientRect().height + works.offsetTop))) {
-        navArr[2].style.color = '#EC5E5E';
-        navArr[0].style.color = '#F2F2F2';
-        navArr[1].style.color = '#F2F2F2';
-        navArr[3].style.color = '#F2F2F2';
-        navArr[4].style.color = '#F2F2F2';
-    } else if ((document.documentElement.scrollTop + 125) > offer.offsetTop && (document.documentElement.scrollTop + 125) <  (Math.floor(offer.getBoundingClientRect().height + offer.offsetTop))) {
-        navArr[3].style.color = '#EC5E5E';
-        navArr[0].style.color = '#F2F2F2';
-        navArr[1].style.color = '#F2F2F2';
-        navArr[2].style.color = '#F2F2F2';
-        navArr[4].style.color = '#F2F2F2';
-    } else if ((document.documentElement.scrollTop + 125) > form.offsetTop && (document.documentElement.scrollTop + 125) <  (Math.floor(form.getBoundingClientRect().height + form.offsetTop))) {
-        navArr[4].style.color = '#EC5E5E';
-        navArr[0].style.color = '#F2F2F2';
-        navArr[1].style.color = '#F2F2F2';
-        navArr[2].style.color = '#F2F2F2';
-        navArr[3].style.color = '#F2F2F2';
+    for(let i = 0;i < secArr.length;i++) {
+        navArr[i].style.color = '#F2F2F2';
+        if ((document.documentElement.scrollTop + 125) > secArr[i].offsetTop && (document.documentElement.scrollTop + 125) <  (Math.floor(secArr[i].getBoundingClientRect().height + secArr[i].offsetTop))) {
+            navArr[i].style.color = '#EC5E5E';
+        }
     }
-}
+ }
+
+ /********************** SCROLL TO BLOCK **************************/
+let navObj = {};
+
+section.forEach(sec => {
+    navObj[sec.classList] = sec.offsetTop - 120;
+})
+navArr[0].addEventListener('click', () => {
+    window.scrollTo(0, navObj.about_me);
+})
+
+navArr[1].addEventListener('click', () => {
+    window.scrollTo(0, navObj.skills);
+})
+
+navArr[2].addEventListener('click', () => {
+    window.scrollTo(0, navObj.works);
+})
+
+navArr[3].addEventListener('click', () => {
+    window.scrollTo(0, navObj.offer);
+})
+
+navArr[4].addEventListener('click', () => {
+    window.scrollTo(0, navObj.form);
+})

@@ -85,10 +85,11 @@
     height: inherit;
 }
 
-.nav__link {
+.nav__item{
     color: $white;
     text-decoration: none;
     transition: 0.5s;
+    cursor: pointer;
 
     &:hover {
         color: $red;

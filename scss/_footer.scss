@@ -1,0 +1,42 @@
+.footer {
+    @include grid;
+    grid-template-columns: 1fr 1fr;
+    height: 130px;
+    background: $black;
+}
+
+.social-wrapper,
+.phone-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 130px;
+    align-items: center;
+    color: $white;
+}
+
+.social-wrapper__caption {
+    text-align: end;
+    font-size: 24px;
+}
+
+.social-wrapper__ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.phone-wrapper__caption {
+    text-align: center;
+    font-size: 24px;
+}
+
+.phone-wrapper__number {
+    font-size: 24px;
+    color: $red;
+    text-decoration: none;
+}
+
+.social-wrapper__img {
+    cursor: pointer;
+}

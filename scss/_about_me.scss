@@ -1,9 +1,6 @@
 .about_me {
     @include grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.section--padding {
     padding-top: 60px;
 }
 
