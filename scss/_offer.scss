@@ -17,3 +17,59 @@
 .text-wrapper__text:nth-child(even) {
     color: $darkWhite;
 }
+
+
+@media only screen and (max-width: 950px) {
+
+    .caption__text {
+        font-size: 36px;
+    }
+    .text-wrapper {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .text-wrapper {
+        text-align: start;
+        margin-left: 30px;
+    }
+    .text-wrapper {
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .caption__text {
+        font-size: 30px;
+    }
+    .text-wrapper {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 530px) {
+
+    .caption__text {
+        font-size: 26px;
+    }
+    .text-wrapper {
+        margin: 10px;
+    }
+    .offer {
+        row-gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    .caption__text {
+        font-size: 20px;
+        margin: 10px;
+    }
+    .offer {
+        row-gap: 15px;
+    }
+}

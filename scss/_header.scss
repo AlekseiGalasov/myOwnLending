@@ -1,6 +1,5 @@
 .header {
     @include grid;
-    display: grid;
     position: fixed;
     grid-template-columns: 1fr 2.5fr;
     grid-template-rows: 5px 125px;
@@ -233,6 +232,9 @@
     }
     .lang-inner__link {
         font-size: 18px;
+    }
+    .nav__item {
+        font-size: 20px;
     }
 }
 

@@ -40,3 +40,44 @@
 .social-wrapper__img {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 850px) {
+    .social-wrapper__caption, .phone-wrapper__caption {
+        font-size: 20px
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .social {
+        margin: 20px 0 10px;
+    }
+    .phone {
+        margin: 10px 0 20px;
+    }
+    .social-wrapper, .phone-wrapper {
+        grid-template-columns: 0.75fr 1fr;
+        height: auto;
+    }
+    .social-wrapper__caption, .phone-wrapper__caption,.phone-wrapper__number {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 530px) {
+    .social-wrapper__caption, .phone-wrapper__caption {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .social-wrapper, .phone-wrapper {
+        grid-template-rows: 0.75fr 1fr;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
