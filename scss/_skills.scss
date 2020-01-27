@@ -17,6 +17,10 @@
     grid-area: 1/1/1/4;
 }
 
+.cv-block__cap {
+    display: none;
+}
+
 .caption__text {
     font-size: 40px;
     margin-top: 40px;
@@ -32,7 +36,16 @@
     padding-bottom: 80px;
 }
 
-.pers-skills__text, .prof-skills__text {
+.cv-block {
+    padding: 0px 30px 80px 10px;
+}
+
+.pers-skills {
+    padding-left: 40px;
+}
+
+
+.pers-skills__text, .prof-skills__text, .cv-block__cap {
     margin: 20px 0 40px 0;
     font-size: 36px;
     font-weight: 700;
@@ -49,4 +62,70 @@
 
 .cv-block__img {
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .pers-skills__text, .prof-skills__text {
+    font-size: 30px;
+}
+    .skills-list__skill {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .skills {
+    row-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.7fr;
+}
+    .caption--area {
+        grid-area: auto;
+    }
+    .pers-skills, .prof-skills, .cv-block {
+        padding-bottom: 0;
+        margin-left: 60px;
+        padding-left: 0;
+        align-items: flex-start;
+    }
+    .prof-skills {
+        grid-row: 3/4;
+    }
+    .skills-list {
+        list-style: none;
+    }
+    .cv-block__text {
+        display: none;
+    }
+    .cv-block__cap {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .pers-skills__text, .prof-skills__text,.cv-block__cap {
+    font-size: 24px;
+    margin: 20px 0 20px 0;
+}
+    .skills-list__skill {
+        font-size: 18px;
+    }
+    .skills {
+        grid-template-rows: 0.3fr 1fr 1fr 0.5fr;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .pers-skills, .prof-skills, .cv-block {
+        margin-left: 35px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .pers-skills, .prof-skills, .cv-block {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
 }

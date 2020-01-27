@@ -1,0 +1,422 @@
+<?php include './php_module/lang.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tegs  -->
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Keywords" content="Веб-разработка, сайт, Эстония, разработчик, веб мастер, создание сайтов">
+    <meta name="author" content="Aleksei Galasov">
+    <meta name="description"
+        content="Сайт front-end разработчика Алексея Галашова, на нем вы найдте информацию об Авторе, его навыки, работы а также личные качества">
+    <title>Aleksei Galasov перспективный front-end разработчик</title>
+
+    <!-- Meta tegs  End -->
+
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- Open Graph  -->
+    <meta property="og:title" content="Aleksei Galasov перспективный front-end разработчик" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:locale:alternate" content="et_EE" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description"
+        content="Сайт front-end разработчика Алексея Галашова, на нем вы найдте информацию об Авторе, его навыки, работы а также личные качества" />
+    <meta property="og:url" content="https://alekseigalasov.ee/" />
+    <meta property="og:site_name" content="AlekseiGalasov" />
+    <meta property="og:image" content="./img/ogImage.png" />
+
+    <!-- Open Graph  End -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-lang-wrapper">
+            <div class="logo"><a href="" class="logo__link">Aleksei Galasov</a></div>
+            <nav class="lang">
+                <ul class="lang-inner">
+                    <li class="lang-inner__item"><a class="lang-inner__link" href="?lang=rus">rus</a></li>
+                    <li class="lang-inner__item"><a class="lang-inner__link" href="?lang=eng">eng</a></li>
+                    <li class="lang-inner__item"><a class="lang-inner__link" href="?lang=est">est</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-bar__progress"></div>
+        </div>
+        <div class="nav-wrapper">
+            <div class="logo logo--none"><a href="" class="logo__link">Aleksei Galasov</a></div>
+            <nav class="nav">
+                <ul class="nav__inner">
+                    <li class="nav__item"><?php echo WHO_I ?></li>
+                    <li class="nav__item"><?php echo SKILLS ?></li>
+                    <li class="nav__item"><?php echo WORKS ?></li>
+                    <li class="nav__item"><?php echo OFFER ?></li>
+                    <li class="nav__item nav__link--red"><?php echo CALLBACK ?></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <div class="cirlce">
+                <span class="cirlce__item"></span>
+            </div>
+        </div>
+    </header>
+    <div class="overlay">
+        <a href="javascript:void(0)" class="overlay__close">&times;</a>
+        <div class="overlay__content">
+            <nav class="lang lang--none lang--padding">
+                <ul class="lang-inner">
+                    <li class="lang-inner__item"><a href="?lang=rus" class="lang-inner__link">rus</a></li>
+                    <li class="lang-inner__item"><a href="?lang=eng" class="lang-inner__link">eng</a></li>
+                    <li class="lang-inner__item"><a href="?lang=est" class="lang-inner__link">est</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li class="nav__item nav__item--margin"><?php echo WHO_I ?></li>
+                    <li class="nav__item nav__item--margin"><?php echo SKILLS ?></li>
+                    <li class="nav__item nav__item--margin"><?php echo WORKS ?></li>
+                    <li class="nav__item nav__item--margin"><?php echo OFFER ?></li>
+                    <li class="nav__item nav__item--margin nav__link--red"><?php echo CALLBACK ?></li>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+    <section class="about_me">
+        <div class="left-side">
+            <h1 class="left-side__name"><?php echo NAME ?></h1>
+            <p class="left-side__text"><?php echo ABOUT_TEXT ?></p>
+        </div>
+        <div class="right-side">
+            <img class="right-side__img" src="./img/mepng.png" alt="Aleksei">
+        </div>
+    </section>
+    <section class="skills">
+        <div class="caption caption--area ">
+            <h2 class="caption__text"><?php echo SKILLS_CAPTION ?></h2>
+        </div>
+        <div class="pers-skills">
+            <h3 class="pers-skills__text"><?php echo PERS_SKILLS ?></h3>
+            <ul class="skills-list">
+                <li class="skills-list__skill"><?php echo PERS_SKILLS_1 ?></li>
+                <li class="skills-list__skill"><?php echo PERS_SKILLS_2 ?></li>
+                <li class="skills-list__skill"><?php echo PERS_SKILLS_3 ?></li>
+                <li class="skills-list__skill"><?php echo PERS_SKILLS_4 ?></li>
+                <li class="skills-list__skill"><?php echo PERS_SKILLS_5 ?></li>
+                <li class="skills-list__skill"><?php echo PERS_SKILLS_6 ?></li>
+            </ul>
+        </div>
+        <div class="cv-block">
+            <h3 class="cv-block__cap"><?php echo CV ?></h3>
+            <a href="./CV-V.K..docx" download><img src="/img/iconfinder-icon1.png" alt="briefcase"
+                    class="cv-block__img"></a>
+            <span class="cv-block__text"><?php echo CV ?></span>
+        </div>
+        <div class="prof-skills">
+            <h3 class="prof-skills__text"><?php echo PROF_SKILLS ?></h3>
+            <ul class="skills-list">
+                <li class="skills-list__skill"><?php echo PROF_SKILLS_1 ?></li>
+                <li class="skills-list__skill"><?php echo PROF_SKILLS_2 ?></li>
+                <li class="skills-list__skill"><?php echo PROF_SKILLS_3 ?></li>
+                <li class="skills-list__skill"><?php echo PROF_SKILLS_4 ?></li>
+                <li class="skills-list__skill"><?php echo PROF_SKILLS_5 ?></li>
+                <li class="skills-list__skill"><?php echo PROF_SKILLS_6 ?></li>
+                <li class="skills-list__skill"><?php echo PROF_SKILLS_7 ?></li>
+            </ul>
+        </div>
+    </section>
+    <section class="works">
+        <div class="caption">
+            <h2 class="caption__text"><?php echo WORKS_CAPTION ?></h2>
+        </div>
+        <div class="slider">
+            <div class="prev"><img src="/img/arrow.png" alt="arrow-left" class="prev__img"></div>
+            <div class="scene">
+                <div class="slide slide1">
+                    <div class="scene-left-side">
+                        <h4 class="scene-left-side__name"><?php echo WORK_1 ?></h4>
+                        <p class="scene-left-side__disc"><?php echo WORK_1_TEXT ?></p>
+                        <a class="scene-left-side__link" target="_blank"
+                            href="https://github.com/AlekseiGalasov/atelje"><img src="/img/github.png" alt="gitHub"
+                                class="scene-left-side__img"></a>
+                    </div>
+                    <div class="scene-right-side">
+                        <div class="container">
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">1 / 6</div>
+                                <img src="/img/works/atelje/atelje1.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">2 / 6</div>
+                                <img src="/img/works/atelje/atelje2.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">3 / 6</div>
+                                <img src="/img/works/atelje/atelje3.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">4 / 6</div>
+                                <img src="/img/works/atelje/atelje4.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">5 / 6</div>
+                                <img src="/img/works/atelje/atelje5.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">6 / 6</div>
+                                <img src="/img/works/atelje/atelje6.png" style="width:100%" alt="slide Image">
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/atelje/atelje1.png" style="width:100%"
+                                        onclick="currentSlide(1)" alt="atelje Image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/atelje/atelje2.png" style="width:100%"
+                                        onclick="currentSlide(2)" alt="atelje Image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/atelje/atelje3.png" style="width:100%"
+                                        onclick="currentSlide(3)" alt="atelje Image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/atelje/atelje4.png" style="width:100%"
+                                        onclick="currentSlide(4)" alt="atelje Image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/atelje/atelje5.png" style="width:100%"
+                                        onclick="currentSlide(5)" alt="atelje Image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/atelje/atelje6.png" style="width:100%"
+                                        onclick="currentSlide(6)" alt="atelje Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide2">
+                    <div class="scene-left-side">
+                        <h4 class="scene-left-side__name"><?php echo WORK_2 ?></h4>
+                        <p class="scene-left-side__disc"><?php echo WORK_2_TEXT ?></p>
+                        <a class="scene-left-side__link" target="_blank"
+                            href="https://github.com/AlekseiGalasov/atelje"><img src="/img/github.png" alt="gitHub"
+                                class="scene-left-side__img"></a>
+                    </div>
+                    <div class="scene-right-side">
+                        <div class="container">
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">1 / 6</div>
+                                <img src="/img/works/ozon/ozon1.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">2 / 6</div>
+                                <img src="/img/works/ozon/ozon2.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">3 / 6</div>
+                                <img src="/img/works/ozon/ozon3.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">4 / 6</div>
+                                <img src="/img/works/ozon/ozon4.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">5 / 6</div>
+                                <img src="/img/works/ozon/ozon5.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">6 / 6</div>
+                                <img src="/img/works/ozon/ozon5.png" style="width:100%" alt="slide Image">
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/ozon/ozon1.png" style="width:100%"
+                                        onclick="currentSlide(7)" alt="Ozon image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/ozon/ozon2.png" style="width:100%"
+                                        onclick="currentSlide(8)" alt="Ozon image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/ozon/ozon3.png" style="width:100%"
+                                        onclick="currentSlide(9)" alt="Ozon image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/ozon/ozon4.png" style="width:100%"
+                                        onclick="currentSlide(10)" alt="Ozon image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/ozon/ozon5.png" style="width:100%"
+                                        onclick="currentSlide(11)" alt="Ozon image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/ozon/ozon5.png" style="width:100%"
+                                        onclick="currentSlide(12)" alt="Ozon image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide3">
+                    <div class="scene-left-side">
+                        <h4 class="scene-left-side__name"><?php echo WORK_3 ?></h4>
+                        <p class="scene-left-side__disc"><?php echo WORK_3_TEXT ?></p>
+                        <a class="scene-left-side__link" target="_blank"
+                            href="https://github.com/AlekseiGalasov/atelje"><img src="/img/github.png" alt="gitHub"
+                                class="scene-left-side__img"></a>
+                    </div>
+                    <div class="scene-right-side">
+                        <div class="container">
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">1 / 6</div>
+                                <img src="/img/works/jsgame/jsgame1.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">2 / 6</div>
+                                <img src="/img/works/jsgame/jsgame2.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">3 / 6</div>
+                                <img src="/img/works/jsgame/jsgame3.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">4 / 6</div>
+                                <img src="/img/works/jsgame/jsgame4.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">5 / 6</div>
+                                <img src="/img/works/jsgame/jsgame5.png" style="width:100%" alt="slide Image">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="mySlides__numbertext">6 / 6</div>
+                                <img src="/img/works/jsgame/jsgame5.png" style="width:100%" alt="slide Image">
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/jsgame/jsgame1.png" style="width:100%"
+                                        onclick="currentSlide(13)" alt="JS game image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/jsgame/jsgame2.png" style="width:100%"
+                                        onclick="currentSlide(14)" alt="JS game image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/jsgame/jsgame3.png" style="width:100%"
+                                        onclick="currentSlide(15)" alt="JS game image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/jsgame/jsgame4.png" style="width:100%"
+                                        onclick="currentSlide(16)" alt="JS game image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/jsgame/jsgame5.png" style="width:100%"
+                                        onclick="currentSlide(17)" alt="JS game image">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="/img/works/jsgame/jsgame5.png" style="width:100%"
+                                        onclick="currentSlide(18)" alt="JS game image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="next"><img src="/img/arrow.png" alt="arrow-right" class="next__img"></div>
+
+        </div>
+    </section>
+    <section class="offer">
+        <div class="caption">
+            <h2 class="caption__text"><?php echo OFFERS_CAPTION ?></h2>
+        </div>
+        <ul class="text-wrapper">
+            <li class="text-wrapper__text"><?php echo OFFERS_TEXT_1 ?></li>
+            <li class="text-wrapper__text"><?php echo OFFERS_TEXT_2 ?></li>
+            <li class="text-wrapper__text"><?php echo OFFERS_TEXT_3 ?></li>
+            <li class="text-wrapper__text"><?php echo OFFERS_TEXT_4 ?></li>
+            <li class="text-wrapper__text"><?php echo OFFERS_TEXT_5 ?></li>
+        </ul>
+    </section>
+    <section class="form">
+        <div class="caption">
+            <h2 class="caption__text"><?php echo FORM_CAPTION ?></h2>
+        </div>
+        <div class="form-inner">
+            <form action="./php_module/send.php" method="POST" class="form-wrapper" enctype="multipart/form-data">
+                <label for="email" class="form-wrapper__text"><?php echo FORM_EMAIL ?></label>
+                <input name="form_email" class="form-wrapper__input" id="email" type="text" required>
+                <label for="text" class="form-wrapper__text"><?php echo FORM_MSG ?></label>
+                <textarea name="form_msg" class="form-wrapper__textarea" id="text" cols="30" rows="10"
+                    required></textarea>
+                <label  for="file" class="form-wrapper__file">
+                    <img src="/img/download.svg" alt="download">
+                    <span class="form-wrapper_text"><?php echo FORM_FILE ?></span>
+                </label>
+                <input name="form_file" class="form-wrapper__input_file" id="file" type="file" data-multiple-caption="{count} files selected" multiple>
+                <input type="submit" value="<?php echo FORM_BTN ?>" class="btn">
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="social">
+            <div class="social-wrapper">
+                <h3 class="social-wrapper__caption"><?php echo SOCIAL ?></h3>
+                <ul class="social-wrapper__ul">
+                    <li class="social-wrapper__li"><a target="_blank" href="https://vk.com/jiex98"
+                            class="social-wrapper__link"><img src="/img/vk.png" alt="vk"
+                                class="social-wrapper__img"></a></li>
+                    <li class="social-wrapper__li"><a target="_blank" href="https://www.facebook.com/aleksei.galasov.5"
+                            class="social-wrapper__link"><img src="/img/fb.png" alt="facebook"
+                                class="social-wrapper__img"></a></li>
+                    <li class="social-wrapper__li"><a href="mailto:alekseigalasov@gmail.com"
+                            class="social-wrapper__link"><img src="/img/gmail.png" alt="gmail"
+                                class="social-wrapper__img"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="phone">
+            <div class="phone-wrapper">
+                <h3 class="phone-wrapper__caption"><?php echo PHONE ?></h3>
+                <a class="phone-wrapper__number" href="tel:+37253586151">+372 53 58 61 51</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
